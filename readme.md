@@ -1,67 +1,84 @@
 # Day 63 Task | Cohort 2.0
 
-This repository contains all the JavaScript exercises completed as part of **Day 60** in **Sheryians Coding School Cohort 2.0**.  
-The focus of this day was to understand **Callbacks**, **Asynchronous Flow**, **Callback Chaining**, and how Callback Hell starts in JavaScript using `setTimeout()`.
+This repository contains all the JavaScript exercises completed as part of **Day 63** in **Sheryians Coding School Cohort 2.0**.  
+The focus of this day was to understand **Promises**, **async/await**, **Error Handling**, and handling **parallel asynchronous operations** in JavaScript.
 
-All exercises are written inside **one single JavaScript file**.
+All exercises are written inside **one single JavaScript file** and are **console-based** (no HTML).
+
 
 ## 📁 File in This Task
 
-### 📌 day60.js — All Callback Exercises (Single File)
+### 📌 day63.js — All Promise & Async Scenarios (Single File)
 
-### Topics Covered
-- Creating and using callback functions  
-- Understanding async execution with `setTimeout()`  
-- Custom delay functions  
-- Passing data through callbacks  
-- Callback chaining  
-- Handling multiple async steps  
-- Callback dependency (login → permissions → dashboard)  
-- Callback hell structure  
 
-## 🧩 Exercises Included
+## 🧠 Topics Covered
 
-### ✔️ Exercise 1 — Callback + Delay (Very Easy)
-- Build a function `afterDelay(time, callback)`  
-- Run callback after given milliseconds  
-- Understand async delay flow  
+| Topic | Description |
+|------|-------------|
+| Promises | Creating and handling asynchronous operations |
+| async / await | Writing asynchronous code in a synchronous style |
+| Error Handling | Using `try / catch` to handle runtime and API errors |
+| Custom Errors | Creating and throwing custom error classes |
+| Parallel Execution | Running multiple async tasks at the same time |
+| Promise.all | Handling multiple promises with fail-fast behavior |
+| Promise.allSettled | Tracking both success and failure results |
+| finally Block | Running cleanup code regardless of outcome |
+| Async Flow Chaining | Combining multiple async operations |
 
-### ✔️ Exercise 2 — Data Flow + Callback Chaining
-- `getUser()` returns a user object after 1 second  
-- `getUserPosts()` returns posts based on userId  
-- Shows how async results move from one function to the next  
 
-### ✔️ Exercise 3 — Multi-step Async Flow (Callback Hell Simulation)
-- `loginUser()` → returns user  
-- `fetchPermissions()` → returns array of permissions  
-- `loadDashboard()` → simulates dashboard loading  
-- Demonstrates nested callback structure  
+## 🧩 Scenarios Included
+
+### ✔️ Scenario 1 — Weather Dashboard with Error Handling
+- Fetch weather data using a public API  
+- Uses `async/await` with `fetch`  
+- Handles invalid city and network errors  
+- Throws a custom `ExtremeTemperatureError`  
+
+
+### ✔️ Scenario 2 — Bulk Email Sending Simulation
+- Simulates sending emails to 5 users  
+- Each email operation is treated as a Promise  
+- Emails are sent in parallel  
+- Shows both success and failure cases  
+- Uses `finally` to indicate completion  
+
+
+### ✔️ Scenario 3 — Combined Async Dashboard (Optional)
+- Fetches weather data first  
+- Sends report emails after weather validation  
+- Demonstrates error handling across async flows  
+- Ensures completion using `finally`  
 
 
 # ✨ Key Learning Highlights
 
 You learned to:
-- Handle asynchronous behavior using callbacks  
-- Use `setTimeout()` to simulate delayed tasks  
-- Pass async results between functions  
-- Build multi-layer async flows  
-- Understand callback hell  
-- Prepare for Promises and async–await  
+- Handle asynchronous operations using Promises  
+- Use `async/await` for cleaner code  
+- Implement robust error handling  
+- Execute multiple Promises in parallel  
+- Track success and failure together  
+- Design clean async workflows  
 
 
 # 🛠️ Technologies Used
 - **JavaScript (ES6+)**  
+- Promises  
+- `async / await`  
+- `fetch` API  
 - `setTimeout()`  
 - Browser Console  
 
+
 # 📖 Learning Outcome
 
-By completing Day 60, I understood:
+By completing Day 63, I understood:
 - How asynchronous execution works in JavaScript  
-- How callbacks allow sequential async flow  
-- Why deeply nested callbacks become unreadable  
-- How async dependencies flow between functions  
-- Why Promises and async–await are needed for cleaner code  
+- How to handle API and runtime errors  
+- How parallel async tasks are managed  
+- Why custom errors are useful  
+- How `finally` ensures cleanup  
+
 
 # 🌟 Acknowledgement
 
